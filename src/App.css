@@ -8,10 +8,19 @@
 }
 
 .MainHeading {
-  color: rgb(228, 236, 236);
+  color: rgb(244, 248, 248);
   text-shadow: 2px 2px #0e0d0d;
   position: fixed;
   top: 40%;
-  left: 28%;
+  left: 20%;
   text-align: center;
+}
+
+.StartButton {
+  background-color: rgb(85, 206, 166);
+}
+
+Nav.navbar {
+margin: 5px;
+font-size: 25px;
 }
