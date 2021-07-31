@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import HomeNavbarComponent from './HomeNavbarComponent';
+import HomeFooter from './HomeFooter';
 
 
 
@@ -8,6 +10,8 @@ class HomePageInfo extends Component {
         return (
             <div>
                 <MainHeader />
+                <HomeNavbarComponent />
+                <HomeFooter />
             </div>
         );
     }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'reactstrap';
 
-class NavbarComponent extends Component {
+class HomeNavbarComponent extends Component {
     constructor(props) {
         super(props);
 
@@ -19,33 +19,34 @@ class NavbarComponent extends Component {
         });
     }
 
+
     render() {
         return (
             <React.Fragment>
-                <Navbar dark sticky="top" expand="md">
+                <Navbar dark sticky="top pull-right" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src="BeigeWritingLogo.png" height="70" width="80" alt="Writing Logo" /></NavbarBrand>
+                    <NavbarBrand className="mr-auto" href="/"><img src="WhiteCircleLogo.png" height="30" width="30" alt="White Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/" style={{ marginRight: 100}}>
-                                        <i className="fa fa-home fa-lg" /> Home
+                                    <NavLink className="nav-link" to="/">
+                                         Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/" style={{ marginRight: 100}}>
-                                        <i className="fa fa-list fa-lg" /> About
+                                    <NavLink className="nav-link" to="/">
+                                         About
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/aboutus" style={{ marginRight: 100}}>
-                                        <i className="fa fa-info fa-lg" /> Contact Us
+                                    <NavLink className="nav-link" to="/aboutus">
+                                        Contact Us
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/contactus" style={{ marginRight: 100}}>
-                                        <i className="fa fa-address-card fa-lg" /> Start Planning!
+                                    <NavLink className="nav-link" to="/contactus">
+                                         Start Planning!
                                     </NavLink>
                                 </NavItem>
                             </Nav>
@@ -55,9 +56,11 @@ class NavbarComponent extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
+                <img src="WhiteCircleLogo.png" class="WhiteLogo" alt="Hanna Khan Photography logo" />
             </React.Fragment>
         );
     }
 }
 
-export default NavbarComponent;
+
+export default HomeNavbarComponent;

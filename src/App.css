@@ -18,9 +18,28 @@
 
 .StartButton {
   background-color: rgb(85, 206, 166);
+  font-size: 20px;
 }
 
-Nav.navbar {
-margin: 5px;
-font-size: 25px;
+
+.WhiteLogo {
+  max-width: 15%;
+  height: 15%;
+}
+
+.site-footer {
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.home-site-footer {
+  padding: 20px 0;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
 }
