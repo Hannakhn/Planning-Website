@@ -3,7 +3,7 @@ import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
     Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-class HomeNavbarComponent extends Component {
+class Header extends Component {
     constructor(props) {
         super(props);
 
@@ -39,8 +39,9 @@ class HomeNavbarComponent extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar dark sticky="top pull-right" expand="md">
+                <Navbar className="HeaderAll" dark sticky="top" expand="md">
                     <div className="container">
+                    <NavbarBrand className="mr-auto" href="/"><img src="WhiteCircleLogo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
@@ -98,11 +99,10 @@ class HomeNavbarComponent extends Component {
                         </Form>
                     </ModalBody>
                 </Modal>
-                <img src="WhiteCircleLogo.png" class="WhiteLogo" alt="Hanna Khan Photography logo" />
             </React.Fragment>
         );
     }
 }
 
 
-export default HomeNavbarComponent;
+export default Header;
