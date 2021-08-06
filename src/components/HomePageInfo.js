@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import HomeNavbarComponent from './HomeNavbarComponent';
 import HomeFooter from './HomeFooter';
-import TodoList from './ToDoListComponents/TodoList'
+import TodoList from './ToDoListComponents/TodoList';
+import StickyNotes from './StickyNotesComponent/StickyNotes';
 
 
 
