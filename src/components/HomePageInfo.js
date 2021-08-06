@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import HomeNavbarComponent from './HomeNavbarComponent';
 import HomeFooter from './HomeFooter';
+import TodoList from './ToDoListComponents/TodoList'
 
 
 
 class HomePageInfo extends Component {
     render() {
         return (
-            <div>
+            <div className="homeImage">
                 <MainHeader />
                 <HomeNavbarComponent />
                 <HomeFooter />

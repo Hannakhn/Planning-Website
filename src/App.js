@@ -11,7 +11,7 @@ import Main from './components/MainComponent';
 function App() {
   return (
     <BrowserRouter>
-      <div className="homeImage">
+      <div>
         <Main />
       </div>
     </BrowserRouter>

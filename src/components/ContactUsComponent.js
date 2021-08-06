@@ -108,7 +108,7 @@ class ContactUs extends Component {
 
                 <div className="row row-content text-align-center">
                     <div className="col-sm-4">
-                        <h5>Our Address</h5>
+                        <h5>Location</h5>
                         <address>
                             Florida,<br />
                             U.S.A.
@@ -123,6 +123,8 @@ class ContactUs extends Component {
                 <div className="row row-content">
                     <div className="col-12">
                         <h2>Send us your Feedback</h2>
+                        <h5>Have any questions or concerns? 
+                             We would love to hear from you!</h5>
                         <hr />
                     </div>
                     <div className="col-md-10">
@@ -215,8 +217,8 @@ class ContactUs extends Component {
                         </Form>
                     </div>
                 </div>
-            </div>
                 <Footer />
+            </div>
             </section>
         );
     }
