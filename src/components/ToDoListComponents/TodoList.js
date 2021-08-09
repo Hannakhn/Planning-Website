@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import { Card } from 'reactstrap';
+import Header from '../HeaderComponent';
+import Footer from '../FooterComponent';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -42,18 +44,22 @@ function TodoList() {
   };
 
   return (
-    <div className="TodoCard">
+    <section>
+      <Header />
+      <div className="TodoCard">
         <Card>
-      <h1 className="TaskHeading">What's the Plan for Today?</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
-      </Card>
-    </div>
+          <h1 className="TaskHeading">What's the Plan for Today?</h1>
+          <TodoForm onSubmit={addTodo} />
+          <Todo
+            todos={todos}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            updateTodo={updateTodo}
+          />
+        </Card>
+      </div>
+      <Footer />
+    </section>
   );
 }
 

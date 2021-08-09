@@ -1,6 +1,8 @@
 import React, { useState, useReducer } from 'react';
 import { v4 as uuid } from 'uuid';
 import { Card } from 'reactstrap';
+import Header from '../HeaderComponent';
+import Footer from '../FooterComponent';
 
 const initialNotesState = {
     lastNoteCreated: null,
@@ -11,10 +13,10 @@ const initialNotesState = {
 const notesReducer = (prevState, action) => {
     switch (action.type) {
         case 'ADD_NOTE': {
-            const newState = { 
+            const newState = {
                 notes: [...prevState.notes, action.payload],
                 totalNotes: prevState.notes.length + 1,
-                lastNoteCreated: new Date().toTimeString().slice(0, 8),
+
             };
             console.log('After ADD_NOTE: ', newState);
             return newState;
@@ -63,43 +65,46 @@ export function StickyNotes() {
     };
 
     return (
-        <div className="app" onDragOver={dragOver}>
-            <Card className="cardSticky">
-            <h1 className="stickyHeading">
-                Sticky Notes ({notesState.totalNotes})
-                <span>{notesState.notes.length ? `Last note created: ${notesState.lastNoteCreated}` : ' '}</span>
-            </h1>
+        <>
+            <Header />
+            <div className="app" onDragOver={dragOver}>
+                <div>
+                    <h1 className="stickyHeading">
+                        Sticky Notes ({notesState.totalNotes})
+                    </h1>
 
-            <form className="note-form" onSubmit={addNote}>
-                <textarea placeholder="Create a new note..." 
-                    value={noteInput}
-                    onChange={event => setNoteInput(event.target.value)}>
-                </textarea>
-                <button className="stickyButton">Add</button>
-            </form>
+                    <form className="note-form" onSubmit={addNote}>
+                        <textarea placeholder="Create a new note..."
+                            value={noteInput}
+                            onChange={event => setNoteInput(event.target.value)}>
+                        </textarea>
+                        <button className="stickyButton">Add</button>
+                    </form>
 
-            {notesState
-                .notes
-                .map(note => (
-                    <div className="notePosted"
-                        style={{ transform: `rotate(${note.rotate}deg)` }}
-                        onDragEnd={dropNote}
-                        draggable="true"
-                        key={note.id}>
+                    {notesState
+                        .notes
+                        .map(note => (
+                            <div className="notePosted"
+                                style={{ transform: `rotate(${note.rotate}deg)` }}
+                                onDragEnd={dropNote}
+                                draggable="true"
+                                key={note.id}>
 
-                        <div onClick={() => dispatch({ type: 'DELETE_NOTE', payload: note })}
-                            className="closeNote">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                            </svg>
-                        </div>
+                                <div onClick={() => dispatch({ type: 'DELETE_NOTE', payload: note })}
+                                    className="closeNote">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                                    </svg>
+                                </div>
+                                <pre className="textInNote">{note.text}</pre>
+                            </div>
 
-                        <pre className="textInNote">{note.text}</pre>
-                    </div>
-                ))
-            }
-            </Card>
-        </div>
+                        ))
+                    }
+                </div>
+            </div>
+            <Footer />
+        </>
     );
 }
 

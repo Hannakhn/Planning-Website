@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
+import {
+    Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
+    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem
+} from 'reactstrap';
+import { NavLink, Link } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -41,7 +43,7 @@ class Header extends Component {
             <React.Fragment>
                 <Navbar className="HeaderAll" dark sticky="top" expand="md">
                     <div className="container">
-                    <NavbarBrand className="mr-auto" href="/"><img src="WhiteCircleLogo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src="WhiteCircleLogo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
@@ -61,9 +63,22 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/startplanning">
-                                        Start Planning!
-                                    </NavLink>
+                                    <UncontrolledDropdown nav inNavbar>
+                                        <DropdownToggle nav>
+                                            Start Here!
+                                        </DropdownToggle>
+                                        <DropdownMenu>
+                                            <DropdownItem>
+                                                Calender
+                                            </DropdownItem>
+                                            <DropdownItem tag={Link} to={`/stickynotes`}>
+                                                Sticky Notes
+                                            </DropdownItem>
+                                            <DropdownItem tag={Link} to={`/todolist`}>
+                                                Task Tracker
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
                                 </NavItem>
                             </Nav>
                             <span className="navbar-text ml-auto">
@@ -79,21 +94,21 @@ class Header extends Component {
                     <ModalBody>
                         <Form onSubmit={this.handleLogin}>
                             <FormGroup>
-                            <Label htmlFor="username">Username</Label>
-                            <Input type="text" id="username" name="username" 
-                            innerRef={input => this.username = input} />
+                                <Label htmlFor="username">Username</Label>
+                                <Input type="text" id="username" name="username"
+                                    innerRef={input => this.username = input} />
                             </FormGroup>
                             <FormGroup>
-                            <Label htmlFor="password">Password</Label>
-                            <Input type="text" id="password" name="password" 
-                            innerRef={input => this.password = input} />
+                                <Label htmlFor="password">Password</Label>
+                                <Input type="text" id="password" name="password"
+                                    innerRef={input => this.password = input} />
                             </FormGroup>
                             <FormGroup check>
-                            <Label check>
-                                <Input type="checkbox" name="remember" 
-                                innerRef={input => this.remember = input} />
-                                Remember me
-                            </Label>
+                                <Label check>
+                                    <Input type="checkbox" name="remember"
+                                        innerRef={input => this.remember = input} />
+                                    Remember me
+                                </Label>
                             </FormGroup>
                             <Button type="submit" value="submit" color="primary">Login</Button>
                         </Form>

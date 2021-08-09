@@ -13,6 +13,7 @@ class HomePageInfo extends Component {
             <div className="homeImage">
                 <MainHeader />
                 <HomeNavbarComponent />
+
                 <HomeFooter />
             </div>
         );
