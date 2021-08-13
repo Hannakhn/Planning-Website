@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
-import { Card } from 'reactstrap';
+import { Card, CardBody, CardImg } from 'reactstrap';
 import Header from '../HeaderComponent';
 import Footer from '../FooterComponent';
 
@@ -46,8 +46,12 @@ function TodoList() {
   return (
     <section>
       <Header />
-      <div className="TodoCard">
-        <Card>
+      <h1 className="TodoHeading">Task List</h1>
+      <h3 className="TodoHeading">Need to visualize and keep track of all of your daily tasks? <br />
+      Keep a list of everything in one place! </h3>
+      <CardImg className="TodoListPhoto" src="/TodoListPhoto.jpg" alt="To do list Photo" />
+      <div>
+        <Card className="TodoCard align-items-center">
           <h1 className="TaskHeading">What's the Plan for Today?</h1>
           <TodoForm onSubmit={addTodo} />
           <Todo

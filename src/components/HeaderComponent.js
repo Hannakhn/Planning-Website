@@ -68,7 +68,7 @@ class Header extends Component {
                                             Start Here!
                                         </DropdownToggle>
                                         <DropdownMenu>
-                                            <DropdownItem>
+                                            <DropdownItem tag={Link} to={`/calendar`}>
                                                 Calender
                                             </DropdownItem>
                                             <DropdownItem tag={Link} to={`/stickynotes`}>

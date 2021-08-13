@@ -4,6 +4,7 @@ import HomeNavbarComponent from './HomeNavbarComponent';
 import HomeFooter from './HomeFooter';
 import TodoList from './ToDoListComponents/TodoList';
 import StickyNotes from './StickyNotesComponent/StickyNotes';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,7 +29,7 @@ const MainHeader = () => {
                 <h3>Sign up today to perform all your planning tracking needs in one place.</h3>
             </div>
             <div>
-                <Button className="StartButton" type="submit">Start Planning!</Button>
+                <Link to="/calendar" className="btn" id='StartButton'>Start Planning</Link>
             </div>
         </section>
     );
