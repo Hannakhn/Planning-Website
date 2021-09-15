@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Planning-Website/static/css/main.df96b974.chunk.css",
+    "main.js": "/Planning-Website/static/js/main.ca916624.chunk.js",
+    "main.js.map": "/Planning-Website/static/js/main.ca916624.chunk.js.map",
+    "runtime-main.js": "/Planning-Website/static/js/runtime-main.954ca35b.js",
+    "runtime-main.js.map": "/Planning-Website/static/js/runtime-main.954ca35b.js.map",
+    "static/css/2.46456953.chunk.css": "/Planning-Website/static/css/2.46456953.chunk.css",
+    "static/js/2.cb3510f1.chunk.js": "/Planning-Website/static/js/2.cb3510f1.chunk.js",
+    "static/js/2.cb3510f1.chunk.js.map": "/Planning-Website/static/js/2.cb3510f1.chunk.js.map",
+    "static/js/3.c3dcc656.chunk.js": "/Planning-Website/static/js/3.c3dcc656.chunk.js",
+    "static/js/3.c3dcc656.chunk.js.map": "/Planning-Website/static/js/3.c3dcc656.chunk.js.map",
+    "index.html": "/Planning-Website/index.html",
+    "static/css/2.46456953.chunk.css.map": "/Planning-Website/static/css/2.46456953.chunk.css.map",
+    "static/css/main.df96b974.chunk.css.map": "/Planning-Website/static/css/main.df96b974.chunk.css.map",
+    "static/js/2.cb3510f1.chunk.js.LICENSE.txt": "/Planning-Website/static/js/2.cb3510f1.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Planning-Website/static/media/post-it-note.bb24903e.png",
+    "static/media/font-awesome.css": "/Planning-Website/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.954ca35b.js",
+    "static/css/2.46456953.chunk.css",
+    "static/js/2.cb3510f1.chunk.js",
+    "static/css/main.df96b974.chunk.css",
+    "static/js/main.ca916624.chunk.js"
+  ]
+}
